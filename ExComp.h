@@ -3,7 +3,7 @@
 #define EXCOMP_H
 
 #include <stdio.h>
-#include <tchar.h>
+
 
 #include <iostream>
 

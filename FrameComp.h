@@ -17,7 +17,7 @@
 #include <assert.h>
 #include <string>
 #include <vector>
-#include <QBasicTimer>
+//#include <QBasicTimer>
 
 #include "SetComp.h"
 #include "AddButton.h"
