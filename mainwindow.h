@@ -1,8 +1,8 @@
-
+ï»¿
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QList>
+
 #include <QMainWindow>
 #include <QSlider>
 
@@ -29,7 +29,7 @@ class QPushButton;
 QT_END_NAMESPACE
 
 /*
-*ƒƒCƒ“ƒEƒBƒ“ƒhƒE‚ÌƒEƒBƒWƒFƒbƒg
+*ãƒ¡ã‚¤ãƒ³ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ
 */
 
 class MainWindow : public QMainWindow
@@ -39,30 +39,30 @@ class MainWindow : public QMainWindow
 public:
 	MainWindow(RTC::MultipleOrderedEC *ec);
    /*
-   *Às‡˜‚ğGUI‚É”½‰f‚³‚¹‚éŠÖ”
+   *å®Ÿè¡Œé †åºã‚’GUIã«åæ˜ ã•ã›ã‚‹é–¢æ•°
    */
    void UpdateRTC(std::vector<Rule> &rs);
    RTC::MultipleOrderedEC *m_ec;
 
 private slots:
 	/*
-	*RTC‚ª’Ç‰ÁAíœ‚³‚ê‚½‚Æ‚«‚ÉŒÄ‚Ño‚³‚ê‚éƒXƒƒbƒg
+	*RTCãŒè¿½åŠ ã€å‰Šé™¤ã•ã‚ŒãŸã¨ãã«å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚¹ãƒ­ãƒƒãƒˆ
 	*/
 	void UpdateComp();
 	/*
-	*ƒTƒCƒY‚ğ•ÏX‚·‚é‚Æ‚«‚ÉŒÄ‚Ño‚³‚ê‚éƒXƒƒbƒg
+	*ã‚µã‚¤ã‚ºã‚’å¤‰æ›´ã™ã‚‹ã¨ãã«å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚¹ãƒ­ãƒƒãƒˆ
 	*/
 	void m_resize(int w, int h);
 	/*
-	*ƒtƒ@ƒCƒ‹•Û‘¶‚ÌƒXƒƒbƒg
+	*ãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜ã®ã‚¹ãƒ­ãƒƒãƒˆ
 	*/
 	bool save();
 	/*
-	*ƒtƒ@ƒCƒ‹“Ç‚İ‚İƒXƒƒbƒg
+	*ãƒ•ã‚¡ã‚¤ãƒ«èª­ã¿è¾¼ã¿ã‚¹ãƒ­ãƒƒãƒˆ
 	*/
 	void open();
 	/*
-	*‰Šú‰»‚ÌƒXƒƒbƒg
+	*åˆæœŸåŒ–ã®ã‚¹ãƒ­ãƒƒãƒˆ
 	*/
 	void newFile();
 
@@ -71,11 +71,11 @@ protected:
 
 private:
 	/*
-	*ƒƒjƒ…[‚Ìì¬‚ÌŠÖ”
+	*ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®ä½œæˆã®é–¢æ•°
 	*/
 	void createMenus();
 	/*
-	*ƒAƒNƒVƒ‡ƒ“‚Ìì¬‚ÌŠÖ”
+	*ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ã®ä½œæˆã®é–¢æ•°
 	*/
 	void createAction();
 	SetComp *SC;

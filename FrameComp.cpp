@@ -1,4 +1,4 @@
-#include <QtGui>
+ï»¿#include <QtGui>
 #include "FrameComp.h"
 #include "CompSearch.h"
 
@@ -27,7 +27,7 @@ FrameComp::FrameComp(RTC::MultipleOrderedEC *ec, SetComp *sc, QWidget *parent)
 	mainLayout = new QVBoxLayout();
 
 	
-	QPushButton *TB = new QPushButton(tc->toUnicode("’Ç‰Á"));
+	QPushButton *TB = new QPushButton(tc->toUnicode("è¿½åŠ "));
 	connect(TB, SIGNAL(clicked()),
             this, SLOT(AddCompsT()));
 
@@ -35,7 +35,7 @@ FrameComp::FrameComp(RTC::MultipleOrderedEC *ec, SetComp *sc, QWidget *parent)
 
 	mainLayout->addWidget(TB);
 
-	QPushButton *DB = new QPushButton(tc->toUnicode("íœ"));
+	QPushButton *DB = new QPushButton(tc->toUnicode("å‰Šé™¤"));
 	connect(DB, SIGNAL(clicked()),
             this, SLOT(DeleteFrame()));
 
@@ -74,7 +74,7 @@ void FrameComp::DeleteFrame()
 
 void FrameComp::AddCompSlot3(CompLayout *c)
 {
-	AddButton *AB2 = new AddButton(tc->toUnicode("’Ç‰Á"));
+	AddButton *AB2 = new AddButton(tc->toUnicode("è¿½åŠ "));
 	
 
 	connect(AB2, SIGNAL(clicked(FEComp *)),
@@ -118,7 +118,7 @@ void FrameComp::AddCompSlot3(CompLayout *c)
 	QWidget *VW = new QWidget();
 	VW->setLayout(Vl);
 
-	AddButton3 *mBT = new AddButton3(tc->toUnicode("íœ"));
+	AddButton3 *mBT = new AddButton3(tc->toUnicode("å‰Šé™¤"));
 	mBT->Vl = VW;
 	mBT->c = c;
 
@@ -213,7 +213,7 @@ void FrameComp::AddCompSlot2(CompLayout *c)
 	
 
 	
-	c->AB = new AddButton2(tc->toUnicode("’Ç\n‰Á"));
+	c->AB = new AddButton2(tc->toUnicode("è¿½\nåŠ "));
 	c->AB->Cl = c;
 
 	
@@ -236,7 +236,7 @@ void FrameComp::AddCompSlot2(CompLayout *c)
 
 
 	
-	AddButton2 *UB = new AddButton2(tc->toUnicode("’Ç‰Á"));
+	AddButton2 *UB = new AddButton2(tc->toUnicode("è¿½åŠ "));
 	UB->Cl = c;
 	connect(UB, SIGNAL(clicked(CompLayout *)),
             this, SLOT(AddCompsU(CompLayout *)));

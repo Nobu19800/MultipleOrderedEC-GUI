@@ -1,4 +1,4 @@
-
+﻿
 #ifndef SETCOMP_H
 #define SETCOMP_H
 
@@ -30,7 +30,7 @@ QT_END_NAMESPACE
 class FrameComp;
 
 /*
-*�S���s�����̃u���b�N�\���E�B�W�F�b�g
+*全実行順序のブロック表示ウィジェット
 */
 
 class SetComp : public QTabWidget
@@ -43,11 +43,11 @@ public:
 	void UpdateRTC(std::vector<Rule> &rs);
 	RTC::MultipleOrderedEC *m_ec;
 	/*
-	*�������̊֐�
+	*初期化の関数
 	*/
 	void newFile();
 	/*
-	*���s�����̍폜�̊֐�
+	*実行順序の削除の関数
 	*/
 	void DeleteComp(FrameComp *fc);
 	std::vector<std::string> rtclist;
@@ -56,38 +56,38 @@ public:
 	
 signals:
 	/*
-	*�T�C�Y�ύX���̔��s����V�O�i��
+	*サイズ変更時の発行するシグナル
 	*/
 	void UpdateSizeSignal(int w, int h);
 
 
 public slots:
 	/*
-	*�T�C�Y�ύX���ɌĂ΂��X���b�g
+	*サイズ変更時に呼ばれるスロット
 	*/
 	void UpdateSizeSlot();
 	/*
-	*�t�@�C���ǂݍ��݃X���b�g
+	*ファイル読み込みスロット
 	*/
 	bool save(const char *Name);
 	/*
-	*�t�@�C���ۑ��̃X���b�g
+	*ファイル保存のスロット
 	*/
 	bool open(const char *Name);
 	/*
-	*���s�����ǉ��̃X���b�g
+	*実行順序追加のスロット
 	*/
 	void CreateComp();
 	/*
-	*���s���Ă���RTC�̃u���b�N�̐F��ς���X���b�g
+	*実行しているRTCのブロックの色を変えるスロット
 	*/
 	void UpdateEC();
 	/*
-	*RTC���ǉ��A�폜���ꂽ�Ƃ��Ƀu���b�N�}�ɔ��f����X���b�g
+	*RTCが追加、削除されたときにブロック図に反映するスロット
 	*/
 	void UpdateComps();
 	/*
-	*RTC���ǉ��A�폜���ꂽ�Ƃ��Ɏ��s�����ɔ��f����X���b�g
+	*RTCが追加、削除されたときに実行条件に反映するスロット
 	*/
 	void UpdateComp2();
 	

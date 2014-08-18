@@ -1,4 +1,4 @@
-#ifndef COMPSEARCH_H
+ï»¿#ifndef COMPSEARCH_H
 #define COMPSEARCH_H
 
 #include <stdio.h>
@@ -13,11 +13,11 @@
 #include <vector>
 
 /*
-*ƒoƒCƒiƒŠƒtƒ@ƒCƒ‹‚É•¶š•Û‘¶‚·‚éŠÖ”
+*ãƒã‚¤ãƒŠãƒªãƒ•ã‚¡ã‚¤ãƒ«ã«æ–‡å­—ä¿å­˜ã™ã‚‹é–¢æ•°
 */
 void WriteString(std::string a, std::ofstream &ofs);
 /*
-*ƒoƒCƒiƒŠƒtƒ@ƒCƒ‹‚æ‚è•¶š“Ç‚İ‚İ‚·‚éŠÖ”
+*ãƒã‚¤ãƒŠãƒªãƒ•ã‚¡ã‚¤ãƒ«ã‚ˆã‚Šæ–‡å­—èª­ã¿è¾¼ã¿ã™ã‚‹é–¢æ•°
 */
 std::string ReadString(std::ifstream &ifs);
 
@@ -26,11 +26,11 @@ std::string ReadString(std::ifstream &ifs);
 */
 std::string GetExtension(std::string &path);
 /*
-*ƒpƒX‚æ‚èƒtƒ@ƒCƒ‹–¼‚ğœ‚­ŠÖ”
+*ãƒ‘ã‚¹ã‚ˆã‚Šãƒ•ã‚¡ã‚¤ãƒ«åã‚’é™¤ãé–¢æ•°
 */
 std::string ExtractPathWithoutExt(std::string &fn);
 /*
-*ƒpƒX‚æ‚èƒtƒ@ƒCƒ‹–¼æ“¾‚·‚éŠÖ”
+*ãƒ‘ã‚¹ã‚ˆã‚Šãƒ•ã‚¡ã‚¤ãƒ«åå–å¾—ã™ã‚‹é–¢æ•°
 */
 std::string ExtractFileName(std::string &path);
 

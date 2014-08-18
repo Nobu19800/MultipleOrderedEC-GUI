@@ -1,4 +1,4 @@
-
+﻿
 #ifndef FRAMECOMP_H
 #define FRAMECOMP_H
 
@@ -49,7 +49,7 @@ class SetComp;
 
 
 /*
-*���s�����̃u���b�N��\������E�B�W�F�b�g
+*実行順序のブロックを表示するウィジェット
 */
 
 
@@ -60,19 +60,19 @@ public:
 	
     FrameComp(RTC::MultipleOrderedEC *ec, SetComp *sc, QWidget *parent = 0);
 	/*
-	*����u���b�N�̏������̊֐�
+	*並列ブロックの初期化の関数
 	*/
 	void AddComp(FEComp *FC);
 	/*
-	*����u���b�N�̒ǉ��̊֐�
+	*並列ブロックの追加の関数
 	*/
 	void InsertComp(int num, FEComp *FC);
 	/*
-	*�T�C�Y�ύX�̊֐�
+	*サイズ変更の関数
 	*/
 	void UpdateSize();
 	/*
-	*�o�C�i���t�@�C���ۑ��̊֐�
+	*バイナリファイル保存の関数
 	*/
 	bool save(std::ofstream &ofs2, std::vector<main_Rule> &mR);
 	
@@ -81,11 +81,11 @@ public:
 	bool openb(std::ifstream &ifs, std::vector<main_Rule> &mR);
 	void UpdateRTC(std::vector<Rule> &rs);
 	/*
-	*�������̊֐�
+	*初期化の関数
 	*/
 	void newFile();
 	/*
-    *RTC���ǉ��A�폜���ꂽ�Ƃ��Ɏ��s�����ɔ��f����֐�
+    *RTCが追加、削除されたときに実行条件に反映する関数
     */
 	void SetFrame(main_Rule &mR);
 	RTC::MultipleOrderedEC *m_ec;
@@ -94,14 +94,14 @@ public:
 	int Y;
 	std::vector<CompLayout *> Comps;
 	/*
-    *RTC���ǉ��A�폜���ꂽ�Ƃ��Ƀu���b�N�ɔ��f����֐�
+    *RTCが追加、削除されたときにブロックに反映する関数
     */
 	void UpdateComp2(std::vector<std::string> rtclist, std::vector<CORBA::Object_ptr> rtclist2);
 	
 
 signals:
 	/*
-	*�T�C�Y�ύX���ɔ��s����V�O�i��
+	*サイズ変更時に発行するシグナル
 	*/
 	void UpdateSizeSignal();
 
@@ -114,41 +114,41 @@ signals:
 
 public slots:
    /*
-   *����u���b�N�Ƀu���b�N�ǉ�����X���b�g
+   *直列ブロックにブロック追加するスロット
    */
    void AddCompSlot(ExComp *ec, FEComp *fc);
    /*
-   *����u���b�N��ǉ�����X���b�g
+   *直列ブロックを追加するスロット
    */
    void AddCompSlot1(FEComp *fc);
    /*
-   *����u���b�N��ǉ�����X���b�g
+   *直列ブロックを追加するスロット
    */
    void AddCompSlot2(CompLayout *c);
    void AddCompSlot3(CompLayout *c);
    void AddComps2();
    /*
-   *����u���b�N���w��ʒu�ɒǉ�����X���b�g
+   *直列ブロックを指定位置に追加するスロット
    */
    void InsertComps2(int num);
    /*
-   *����u���b�N��擪�ɒǉ�����X���b�g
+   *並列ブロックを先頭に追加するスロット
    */
    void AddCompsT();
    /*
-   *����u���b�N�����̃E�B�W�F�b�g�̎��ɒǉ�����X���b�g
+   *並列ブロックをこのウィジェットの次に追加するスロット
    */
    void AddCompsU(CompLayout *c);
    /*
-   *����u���b�N���폜����X���b�g
+   *直列ブロックを削除するスロット
    */
    void DeleteComp(QWidget *Vl, CompLayout *c);
    /*
-   *�u���b�N�̐F��ς���X���b�g
+   *ブロックの色を変えるスロット
    */
    void UpdateEC(std::vector<Rule> &rs);
    /*
-   *���̃u���b�N���폜����X���b�g
+   *このブロックを削除するスロット
    */
    void DeleteFrame();
    

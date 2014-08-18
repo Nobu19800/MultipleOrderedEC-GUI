@@ -1,4 +1,4 @@
-#include <QtGui>
+ï»¿#include <QtGui>
 #include "Config.h"
 
 
@@ -16,8 +16,8 @@ Configs::Configs(QWidget *parent)
 	tc = QTextCodec::codecForLocale();
 
 	
-	componentName = new QLabel(tc->toUnicode("ƒRƒ“ƒ|[ƒlƒ“ƒg"));
-	noneName = new QLabel(tc->toUnicode("ðŒ‚È‚µ"));
+	componentName = new QLabel(tc->toUnicode("ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ"));
+	noneName = new QLabel(tc->toUnicode("æ¡ä»¶ãªã—"));
 	createdName = new QLabel(tc->toUnicode("CREATED"));
 	inactiveName = new QLabel(tc->toUnicode("INACTIVE"));
 	activeName = new QLabel(tc->toUnicode("ACTIVE"));

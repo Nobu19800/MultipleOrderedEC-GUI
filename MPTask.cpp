@@ -1,4 +1,4 @@
-#include "MPTask.h"
+﻿#include "MPTask.h"
 
 bool GUITask::app_flag = false;
 

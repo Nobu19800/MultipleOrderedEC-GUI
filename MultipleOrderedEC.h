@@ -1,4 +1,4 @@
-#ifndef RTC_MUTIPLEORDEREDEC_H
+﻿#ifndef RTC_MUTIPLEORDEREDEC_H
 #define RTC_MUTIPLEORDEREDEC_H
 
 #include <rtm/RTC.h>
@@ -21,7 +21,7 @@ class GUITask;
 namespace RTC
 {
   /*
-  *���s�����̐ݒ肪�ł�����s�R���e�L�X�g�N���X
+  *実行順序の設定ができる実行コンテキストクラス
   */
   class MultipleOrderedEC
     : public virtual PeriodicExecutionContext
@@ -34,37 +34,37 @@ namespace RTC
     virtual ~MultipleOrderedEC(void);
 
 	/*
-	*�X���b�h���s�֐�
+	*スレッド実行関数
 	*/
     virtual int svc(void);
 	/*
-	*�R���|�[�l���g�̃��W�b�N���s�̊֐�
+	*コンポーネントのロジック実行の関数
 	*/
 	void workerComp(sub_Rule *c);
 
 	
 	/*
-	*�t�@�C��������s�����̓ǂݍ��݂̊֐�
+	*ファイルから実行順序の読み込みの関数
 	*/
 	void LoadRule();
 
 	
 	/*
-	*�R���|�[�l���g�̖��O�擾�̊֐�
+	*コンポーネントの名前取得の関数
 	*/
 	std::string getCompName(int num);
 	/*
-	*�R���|�[�l���g�̐��擾�̊֐�
+	*コンポーネントの数取得の関数
 	*/
 	int getCompNum();
 
 	/*
-	*GUI������s�����̓ǂݍ��݂̊֐�
+	*GUIから実行順序の読み込みの関数
 	*/
 	void LoadRuleGUI(std::vector<main_Rule> &RS_d);
 
 	/*
-	*�ݒ肵�����s������RTC���i�[����֐�
+	*設定した実行順序のRTCを格納する関数
 	*/
 	void LoadRules();
 
@@ -80,7 +80,7 @@ namespace RTC
 
 	//std::vector<Comp> s_comp;
 	/*
-	*rtc.conf�̐ݒ���擾����֐�
+	*rtc.confの設定を取得する関数
 	*/
 	template <class T>
     void getProperty(coil::Properties& prop, const char* key, T& value)

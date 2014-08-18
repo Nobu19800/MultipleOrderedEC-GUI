@@ -1,4 +1,4 @@
-#ifndef MPTASK_H
+ï»¿#ifndef MPTASK_H
 #define MPTASK_H
 
 #include <rtm/RTC.h>
@@ -16,7 +16,7 @@
 
 
 /*
-*“¯ˆêƒXƒŒƒbƒh‚Å‚ÌÀs‡˜ƒNƒ‰ƒX
+*åŒä¸€ã‚¹ãƒ¬ãƒƒãƒ‰ã§ã®å®Ÿè¡Œé †åºã‚¯ãƒ©ã‚¹
 */
 class MPComp
 {
@@ -29,18 +29,18 @@ public:
 };
 
 /*
-*’¼—ñƒuƒƒbƒN‚ğÀs‚·‚éƒXƒŒƒbƒh‚ÌƒNƒ‰ƒX
+*ç›´åˆ—ãƒ–ãƒ­ãƒƒã‚¯ã‚’å®Ÿè¡Œã™ã‚‹ã‚¹ãƒ¬ãƒƒãƒ‰ã®ã‚¯ãƒ©ã‚¹
 */
 class MPTask : public virtual coil::Task
 {
 public:
 		MPTask(RTC::MultipleOrderedEC *c);
 		/*
-		*ƒXƒŒƒbƒhÀsŠÖ”
+		*ã‚¹ãƒ¬ãƒƒãƒ‰å®Ÿè¡Œé–¢æ•°
 		*/
 		virtual int svc();
 		/*
-		*ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğ’Ç‰Á‚·‚éŠÖ”
+		*ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’è¿½åŠ ã™ã‚‹é–¢æ•°
 		*/
 		void addComp(sub_Rule *c, int I, int J, int K);
 private:
@@ -50,7 +50,7 @@ private:
 };
 
 /*
-*GUI‚ğÀs‚·‚éƒXƒŒƒbƒh‚ÌƒNƒ‰ƒX
+*GUIã‚’å®Ÿè¡Œã™ã‚‹ã‚¹ãƒ¬ãƒƒãƒ‰ã®ã‚¯ãƒ©ã‚¹
 */
 
 class GUITask : public virtual coil::Task
@@ -58,7 +58,7 @@ class GUITask : public virtual coil::Task
 public:
 		GUITask(RTC::MultipleOrderedEC *ec);
 		/*
-		*ƒXƒŒƒbƒhÀsŠÖ”
+		*ã‚¹ãƒ¬ãƒƒãƒ‰å®Ÿè¡Œé–¢æ•°
 		*/
 		virtual int svc();
 		void updateRTC();

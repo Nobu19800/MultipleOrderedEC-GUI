@@ -1,4 +1,4 @@
-#ifndef FECOMP_H
+ï»¿#ifndef FECOMP_H
 #define FECOMP_H
 
 #include <QWidget>
@@ -25,7 +25,7 @@ QT_END_NAMESPACE
 class ExComp;
 
 /*
-*’¼—ñƒuƒƒbƒN‚ÌƒEƒBƒWƒFƒbƒg
+*ç›´åˆ—ãƒ–ãƒ­ãƒƒã‚¯ã®ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ
 */
 
 class FEComp : public QWidget

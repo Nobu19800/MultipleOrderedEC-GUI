@@ -1,4 +1,4 @@
-
+﻿
 #ifndef EXCOMP_H
 #define EXCOMP_H
 
@@ -45,7 +45,7 @@ class FEComp;
 class AddButton2;
 
 /*
-*RTC�̃u���b�N�̃E�B�W�F�b�g
+*RTCのブロックのウィジェット
 */
 
 class ExComp : public QWidget
@@ -55,7 +55,7 @@ public:
 	
     ExComp(QWidget *parent = 0);
 	/*
-    *RTC���ǉ��A�폜���ꂽ�Ƃ��Ɏ��s�����ɔ��f����֐�
+    *RTCが追加、削除されたときに実行条件に反映する関数
     */
 	void UpdateComp(std::vector<std::string> &rtclist, std::vector<CORBA::Object_ptr> &rtclist2);
 	FEComp *Fc;
@@ -64,18 +64,18 @@ public:
 
 signals:
 	/*
-	*RTC��ǉ��{�^�����������Ƃ��ɔ��s����V�O�i��
+	*RTCを追加ボタンを押したときに発行するシグナル
 	*/
 	void AddCompSignal(ExComp *ec, FEComp *fc);
 
 
 public slots:
 	/*
-	*�u���b�N���폜�����Ƃ��ɌĂяo�����X���b�g
+	*ブロックを削除したときに呼び出されるスロット
 	*/
 	void DeleteComp();
 	/*
-	*RTC��ǉ��{�^�����������Ƃ��ɌĂяo�����X���b�g
+	*RTCを追加ボタンを押したときに呼び出されるスロット
 	*/
 	void AddCompSlot();
 
@@ -101,7 +101,7 @@ private:
 
 
 /*
-*RTC�̃u���b�N�̃��C�A�E�g
+*RTCのブロックのレイアウト
 */
 
 class CompLayout

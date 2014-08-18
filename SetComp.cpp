@@ -1,4 +1,4 @@
-#include <QtGui>
+ï»¿#include <QtGui>
 #include <sstream>
 #include "SetComp.h"
 
@@ -71,7 +71,7 @@ void SetComp::CreateComp()
 	stream << FCS.size();
 	std::string N = "system:" + stream.str();
 	addTab(FC, tc->toUnicode(N.c_str()));
-	N = N + "ðŒ";
+	N = N + "æ¡ä»¶";
 	addTab(FC->cf, tc->toUnicode(N.c_str()));
 
 	/*FC->cf->resetComp();

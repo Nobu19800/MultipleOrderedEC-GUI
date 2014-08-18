@@ -1,4 +1,4 @@
-#include "MPLua.h"
+﻿#include "MPLua.h"
 #include "CompSearch.h"
 #include <luabind/luabind.hpp>
 #include <lua.hpp>
@@ -16,6 +16,7 @@ main_Rule* MainLules::getMainRule(int num)
 {
 	if(rs.size() > num)
 		return &rs[num];
+	return NULL;
 }
 
 

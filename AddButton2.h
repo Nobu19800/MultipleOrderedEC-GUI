@@ -1,4 +1,4 @@
-#ifndef ADDBUTTON2_H
+ï»¿#ifndef ADDBUTTON2_H
 #define ADDBUTTON2_H
 
 #include "ExComp.h"
@@ -26,7 +26,7 @@ class CompLayout;
 
 
 /*
-*’¼—ñƒuƒƒbƒN’Ç‰Áƒ{ƒ^ƒ“‚ğŠÜ‚ŞƒEƒBƒWƒFƒbƒg
+*ç›´åˆ—ãƒ–ãƒ­ãƒƒã‚¯è¿½åŠ ãƒœã‚¿ãƒ³ã‚’å«ã‚€ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ
 */
 
 class AddButton2 : public QWidget
@@ -39,13 +39,13 @@ public:
 
 signals:
 	/*
-	*ƒ{ƒ^ƒ“ƒNƒŠƒbƒN‚É”­s‚·‚éƒVƒOƒiƒ‹
+	*ãƒœã‚¿ãƒ³ã‚¯ãƒªãƒƒã‚¯æ™‚ã«ç™ºè¡Œã™ã‚‹ã‚·ã‚°ãƒŠãƒ«
 	*/
 	void clicked(CompLayout *cl);
 
 public slots:
 	/*
-	*ƒ{ƒ^ƒ“ƒNƒŠƒbƒN‚ÉŒÄ‚Ño‚·ƒXƒƒbƒg
+	*ãƒœã‚¿ãƒ³ã‚¯ãƒªãƒƒã‚¯æ™‚ã«å‘¼ã³å‡ºã™ã‚¹ãƒ­ãƒƒãƒˆ
 	*/
 	void clickedSlot();
 

@@ -1,4 +1,4 @@
-#ifndef ADDBUTTON3_H
+ï»¿#ifndef ADDBUTTON3_H
 #define ADDBUTTON3_H
 
 #include "ExComp.h"
@@ -25,7 +25,7 @@ QT_END_NAMESPACE
 class CompLayout;
 
 /*
-*•À—ñƒuƒƒbƒN’Ç‰Áƒ{ƒ^ƒ“‚ğŠÜ‚ŞƒEƒBƒWƒFƒbƒg
+*ä¸¦åˆ—ãƒ–ãƒ­ãƒƒã‚¯è¿½åŠ ãƒœã‚¿ãƒ³ã‚’å«ã‚€ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ
 */
 
 class AddButton3 : public QWidget
@@ -39,13 +39,13 @@ public:
 
 signals:
 	/*
-	*ƒ{ƒ^ƒ“ƒNƒŠƒbƒN‚É”­s‚·‚éƒVƒOƒiƒ‹
+	*ãƒœã‚¿ãƒ³ã‚¯ãƒªãƒƒã‚¯æ™‚ã«ç™ºè¡Œã™ã‚‹ã‚·ã‚°ãƒŠãƒ«
 	*/
 	void clicked(QWidget *Vl, CompLayout *cl);
 
 public slots:
 	/*
-	*ƒ{ƒ^ƒ“ƒNƒŠƒbƒN‚ÉŒÄ‚Ño‚·ƒXƒƒbƒg
+	*ãƒœã‚¿ãƒ³ã‚¯ãƒªãƒƒã‚¯æ™‚ã«å‘¼ã³å‡ºã™ã‚¹ãƒ­ãƒƒãƒˆ
 	*/
 	void clickedSlot();
 

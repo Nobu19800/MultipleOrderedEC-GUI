@@ -1,4 +1,4 @@
-#include "MultipleOrderedEC.h"
+﻿#include "MultipleOrderedEC.h"
 #include <rtm/ECFactory.h>
 #include <iostream>
 #include <rtm/CorbaConsumer.h>
@@ -57,7 +57,7 @@ namespace RTC
   {
 	  mutex_2.lock();
 	  ComponentProfile *mc = m_comps[num]._sm.m_obj->get_component_profile();
-	  std::string Name = mc->instance_name;
+	  std::string Name = (const char*)mc->instance_name;
 	
 	  delete mc;
 	   mutex_2.unlock();
@@ -117,7 +117,7 @@ namespace RTC
 			  for(int j=0;j <  m_comps.size();j++)
 			  {
 				ComponentProfile *mc = m_comps[j]._sm.m_obj->get_component_profile();
-				std::string Name = mc->instance_name;
+				std::string Name = (const char*)mc->instance_name;
 				
 				delete mc;
 				if(Name == rs[h].ar[i].name)
@@ -135,7 +135,7 @@ namespace RTC
 					for(int l=0;l < m_comps.size();l++)
 					{
 						ComponentProfile *mc = m_comps[l]._sm.m_obj->get_component_profile();
-						std::string Name = mc->instance_name;
+						std::string Name = (const char*)mc->instance_name;
 						
 						delete mc;
 						

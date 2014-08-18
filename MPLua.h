@@ -1,16 +1,16 @@
-#ifndef MPLUA_H
+ï»¿#ifndef MPLUA_H
 #define MPLUA_H
 
 #include "MultipleOrderedEC.h"
 #include "MPComp.h"
 
 /*
-*Lua‚æ‚èÀs‡˜‚Ì“Ç‚İ‚ŞŠÖ”
+*Luaã‚ˆã‚Šå®Ÿè¡Œé †åºã®èª­ã¿è¾¼ã‚€é–¢æ•°
 */
 bool LoadMainRule_Lua(std::vector<main_Rule> &rs, std::string Name);
 
 /*
-*‘SÀs‡˜‚ÌƒNƒ‰ƒX
+*å…¨å®Ÿè¡Œé †åºã®ã‚¯ãƒ©ã‚¹
 */
 class MainLules
 {

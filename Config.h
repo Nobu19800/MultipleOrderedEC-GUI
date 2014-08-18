@@ -1,4 +1,4 @@
-
+ï»¿
 #ifndef CONFIG_H
 #define CONFIG_H
 
@@ -37,12 +37,12 @@ QT_END_NAMESPACE
 
 
 /*
-*ÀsğŒ‚Ì‰Šú‰»‚ÌŠÖ”
+*å®Ÿè¡Œæ¡ä»¶ã®åˆæœŸåŒ–ã®é–¢æ•°
 */
 void CrearLayout(QLayout *lt);
 
 /*
-*ÀsğŒ‚ÌƒEƒBƒWƒFƒbƒg‚É•\¦‚·‚éRTC‚ÌƒNƒ‰ƒX
+*å®Ÿè¡Œæ¡ä»¶ã®ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆã«è¡¨ç¤ºã™ã‚‹RTCã®ã‚¯ãƒ©ã‚¹
 */
 
 class CompList
@@ -61,7 +61,7 @@ public:
 };
 
 /*
-*ÀsğŒ‚ÌƒEƒBƒWƒFƒbƒg
+*å®Ÿè¡Œæ¡ä»¶ã®ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ
 */
 
 
@@ -72,11 +72,11 @@ public:
 	
     Configs(QWidget *parent = 0);
 	/*
-	*RTC‚ª’Ç‰Á‚³‚ê‚½‚Æ‚«‚É”½‰f‚·‚éŠÖ”
+	*RTCãŒè¿½åŠ ã•ã‚ŒãŸã¨ãã«åæ˜ ã™ã‚‹é–¢æ•°
 	*/
 	void addComp(std::string name);
 	/*
-	*‰Šú‰»‚ÌŠÖ”
+	*åˆæœŸåŒ–ã®é–¢æ•°
 	*/
 	void resetComp();
 	std::vector<CompList *> Cl;

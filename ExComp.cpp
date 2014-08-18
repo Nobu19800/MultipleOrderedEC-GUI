@@ -1,4 +1,4 @@
-#include <QtGui>
+﻿#include <QtGui>
 #include "ExComp.h"
 
 
@@ -33,13 +33,13 @@ ExComp::ExComp(QWidget *parent)
 
 	
 
-	BT = new QPushButton(tc->toUnicode("�폜"));
+	BT = new QPushButton(tc->toUnicode("削除"));
 
 	connect(BT, SIGNAL(clicked()),
             this, SLOT(DeleteComp()));
 
 
-	DT = new QPushButton(tc->toUnicode("�ǉ�"));
+	DT = new QPushButton(tc->toUnicode("追加"));
 
 	connect(DT, SIGNAL(clicked()),
             this, SLOT(AddCompSlot()));

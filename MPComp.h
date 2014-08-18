@@ -1,4 +1,4 @@
-#ifndef MPCOMP_H
+ï»¿#ifndef MPCOMP_H
 #define MPCOMP_H
 #include <rtm/RTC.h>
 #include <rtm/Manager.h>
@@ -8,7 +8,7 @@
 
 
 /*
-*ÀsğŒ‚ÌƒNƒ‰ƒX
+*å®Ÿè¡Œæ¡ä»¶ã®ã‚¯ãƒ©ã‚¹
 */
 class add_Rule
 {
@@ -20,7 +20,7 @@ public:
 };
 
 /*
-*’¼—ñƒuƒƒbƒN‚ÌƒNƒ‰ƒX
+*ç›´åˆ—ãƒ–ãƒ­ãƒƒã‚¯ã®ã‚¯ãƒ©ã‚¹
 */
 
 class sub_Rule
@@ -33,7 +33,7 @@ public:
 };
 
 /*
-*•À—ñƒuƒƒbƒN‚ÌƒNƒ‰ƒX
+*ä¸¦åˆ—ãƒ–ãƒ­ãƒƒã‚¯ã®ã‚¯ãƒ©ã‚¹
 */
 
 class Rule
@@ -50,7 +50,7 @@ public:
 };
 
 /*
-*Às‡˜‚ÌƒNƒ‰ƒX
+*å®Ÿè¡Œé †åºã®ã‚¯ãƒ©ã‚¹
 */
 class main_Rule
 {
@@ -60,11 +60,11 @@ public:
 	std::vector<add_Rule> ar;
 
 	/*
-	*•À—ñƒuƒƒbƒN‚Ì’Ç‰Á‚ÌŠÖ”
+	*ä¸¦åˆ—ãƒ–ãƒ­ãƒƒã‚¯ã®è¿½åŠ ã®é–¢æ•°
 	*/
 	void addRule();
 	/*
-	*ÀsğŒ‚Ì’Ç‰Á‚ÌŠÖ”
+	*å®Ÿè¡Œæ¡ä»¶ã®è¿½åŠ ã®é–¢æ•°
 	*/
 	void addaddRule(std::string n, int s);
 
@@ -74,11 +74,11 @@ public:
 };
 
 /*
-*ƒtƒ@ƒCƒ‹‚æ‚èÀs‡˜‚Ì“Ç‚İ‚ŞŠÖ”
+*ãƒ•ã‚¡ã‚¤ãƒ«ã‚ˆã‚Šå®Ÿè¡Œé †åºã®èª­ã¿è¾¼ã‚€é–¢æ•°
 */
 bool LoadMainRule(std::vector<main_Rule> &rs, std::string Name);
 /*
-*ƒeƒLƒXƒgƒtƒ@ƒCƒ‹‚©‚ç‚ÌÀs‡˜“Ç‚İ‚ŞŠÖ”
+*ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã®å®Ÿè¡Œé †åºèª­ã¿è¾¼ã‚€é–¢æ•°
 */
 void LoadAddRule(std::vector<std::string> &cs, int &nm, std::vector<add_Rule> &ar);
 void LoadSubRule(std::vector<std::string> &cs, int &nm, std::vector<sub_Rule> &sr);
@@ -87,7 +87,7 @@ void LoadSRule(std::vector<std::string> &cs, int &nm, Rule &r);
 bool AddCount(std::vector<std::string> &cs, int &nm);
 
 /*
-*•¶š‚Ì’u‚«Š·‚¦‚ÌŠÖ”
+*æ–‡å­—ã®ç½®ãæ›ãˆã®é–¢æ•°
 */
 std::string Replace( std::string String1, std::string String2, std::string String3 );
 

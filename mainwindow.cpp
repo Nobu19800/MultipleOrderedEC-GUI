@@ -1,4 +1,4 @@
-#include <QtGui>
+Ôªø#include <QtGui>
 #include <QLabel>
 
 #include "mainwindow.h"
@@ -30,13 +30,13 @@ MainWindow::MainWindow(RTC::MultipleOrderedEC *ec)
 	layout->addWidget(SC);
 
 	layout->addStretch();
-	UB = new QPushButton(tc->toUnicode("çXêV"));
+	UB = new QPushButton(tc->toUnicode("Êõ¥Êñ∞"));
 	layout->addWidget(UB);
 
 	connect(UB, SIGNAL(clicked()),
             this, SLOT(UpdateComp()));
 
-	QPushButton *DB = new QPushButton(tc->toUnicode("í«â¡"));
+	QPushButton *DB = new QPushButton(tc->toUnicode("ËøΩÂä†"));
 	layout->addWidget(DB);
 
 	connect(DB, SIGNAL(clicked()),
@@ -107,7 +107,7 @@ void MainWindow::createMenus()
 void MainWindow::open()
 {
 	QString fileName = QFileDialog::getOpenFileName(this,
-							tc->toUnicode("äJÇ≠"), "",
+							tc->toUnicode("Èñã„Åè"), "",
 							tr("Config File (*.conf);;Lua File (*.lua);;All Files (*)"));
 	
 
@@ -119,7 +119,7 @@ void MainWindow::open()
 bool MainWindow::save()
 {
 	QString fileName = QFileDialog::getSaveFileName(this,
-							tc->toUnicode("ï€ë∂"), "",
+							tc->toUnicode("‰øùÂ≠ò"), "",
 							tr("Config File (*.conf);;All Files (*)"));
 	if (fileName.isEmpty())
         return false;

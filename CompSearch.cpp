@@ -1,4 +1,4 @@
-#include "CompSearch.h"
+﻿#include "CompSearch.h"
 
 
 using namespace RTC;

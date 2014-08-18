@@ -1,4 +1,4 @@
-#include "MPComp.h"
+﻿#include "MPComp.h"
 #include "CompSearch.h"
 #include "MPLua.h"
 
@@ -39,12 +39,14 @@ Rule *main_Rule::getRule(int num)
 {
 	if(rs.size() > num)
 		return &rs[num];
+	return NULL;
 }
 
 add_Rule *main_Rule::getaddRule(int num)
 {
 	if(ar.size() > num)
 		return &ar[num];
+	return NULL;
 }
 
 
@@ -155,7 +157,7 @@ void LoadAddRule(std::vector<std::string> &cs, int &nm,std::vector<add_Rule> &ar
 		
 		if(!AddCount(cs, nm))
 			return;
-		if(cs[nm] == "�Ȃ�"){
+		if(cs[nm] == "なし"){
 			ae.state = -1;
 		}
 		else if(cs[nm] == "CREATED"){
