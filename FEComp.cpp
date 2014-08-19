@@ -1,4 +1,4 @@
-#include "FEComp.h"
+﻿#include "FEComp.h"
 #include <QtGui>
 
 
