@@ -1,5 +1,6 @@
 ﻿#include "AddButton2.h"
-#include <QtGui>
+
+#include <QtWidgets>
 
 
 AddButton2::AddButton2(QString text, QWidget *parent)

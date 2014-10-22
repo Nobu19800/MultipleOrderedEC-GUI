@@ -1,5 +1,6 @@
 ﻿#include "AddButton3.h"
-#include <QtGui>
+
+#include <QtWidgets>
 
 
 AddButton3::AddButton3(QString text, QWidget *parent)

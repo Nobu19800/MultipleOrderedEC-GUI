@@ -1,5 +1,7 @@
-﻿#include "FEComp.h"
-#include <QtGui>
+﻿
+#include <QtWidgets>
+#include "FEComp.h"
+
 
 
 

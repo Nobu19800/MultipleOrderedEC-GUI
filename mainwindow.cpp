@@ -1,5 +1,6 @@
-﻿#include <QtGui>
+﻿
 #include <QLabel>
+#include <QtWidgets>
 
 #include "mainwindow.h"
 
