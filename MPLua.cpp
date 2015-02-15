@@ -55,10 +55,12 @@ bool LoadMainRule_Lua(std::vector<main_Rule> &rs, std::string Name)
 	lua_global["MainLules_object"] = &ml;
 
 	try {
-		std::string tmp = Replace(Name,"\\","/");
-		std::string tmp2 = ExtractFileName(Name);
+		std::string tmp = Name;
+		coil::replaceString(tmp,"\\","/");
+		PathList pl = PathList(Name);
 		
-	  call_function<void>(lua, "load_comp", tmp, tmp2);
+		
+		call_function<void>(lua, "load_comp", tmp, pl.name);
 
 	} catch (const error &e) {
 		return false;

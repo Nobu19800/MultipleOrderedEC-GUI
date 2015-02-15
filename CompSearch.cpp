@@ -1,4 +1,6 @@
-﻿#include "CompSearch.h"
+﻿#include <coil/File.h>
+
+#include "CompSearch.h"
 
 
 using namespace RTC;
@@ -30,60 +32,22 @@ string ReadString(ifstream &ifs)
 	return a;
 }
 
-string GetExtension(string &path)
-{
-	string ext;
-    size_t pos1 = path.rfind('.');
-	if(pos1 != string::npos){
-        ext = path.substr(pos1+1, path.size()-pos1);
-        string::iterator itr = ext.begin();
-        while(itr != ext.end()){
-            *itr = tolower(*itr);
-            itr++;
-        }
-        itr = ext.end()-1;
-        while(itr != ext.begin()){
-            if(*itr == 0 || *itr == 32){
-                ext.erase(itr--);
-            }
-            else{
-                itr--;
-            }
-        }
-    }
- 
-    return ext;
-}
 
-string ExtractPathWithoutExt(string &fn)
+PathList::PathList(std::string path)
 {
-    string::size_type pos;
-	if((pos = fn.find_last_of(".")) == string::npos){
-        return fn;
-    }
- 
-    return fn.substr(0, pos);
-}
-
-string ExtractFileName(string &path)
-{
+	fname = coil::basename(path.c_str());
+	std::vector<std::string> sl = coil::split(fname,".");
+	name = sl[0];
 	
-    string fn;
-    string::size_type fpos;
-    if((fpos = path.find_last_of("/")) != string::npos){
-        fn = path.substr(fpos+1);
-    }
-    else if((fpos = path.find_last_of("\\")) != string::npos){
-		fn = path.substr(fpos+1);
-		
+	if(sl.size() > 1)
+	{
+		cxt = sl[1];
 	}
-	else{
-		fn = path;
+	else
+	{
+		cxt = "";
 	}
 	
- 
-	fn = ExtractPathWithoutExt(fn);
-	
- 
-	return fn;
+	char* repath = const_cast<char*>(path.c_str());
+	dname = coil::dirname(repath);
 }

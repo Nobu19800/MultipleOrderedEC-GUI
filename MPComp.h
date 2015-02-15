@@ -86,9 +86,5 @@ void LoadHRule(std::vector<std::string> &cs, int &nm, std::vector<Rule> &rs);
 void LoadSRule(std::vector<std::string> &cs, int &nm, Rule &r);
 bool AddCount(std::vector<std::string> &cs, int &nm);
 
-/*
-*文字の置き換えの関数
-*/
-std::string Replace( std::string String1, std::string String2, std::string String3 );
 
 #endif

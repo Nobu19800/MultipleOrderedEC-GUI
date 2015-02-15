@@ -21,17 +21,17 @@ void WriteString(std::string a, std::ofstream &ofs);
 */
 std::string ReadString(std::ifstream &ifs);
 
-/*
-*
-*/
-std::string GetExtension(std::string &path);
-/*
-*パスよりファイル名を除く関数
-*/
-std::string ExtractPathWithoutExt(std::string &fn);
-/*
-*パスよりファイル名取得する関数
-*/
-std::string ExtractFileName(std::string &path);
+
+class PathList
+{
+public:
+	PathList(std::string path);
+	std::string fname;
+	std::string name;
+	std::string cxt;
+	std::string dname;
+};
+
+
 
 #endif

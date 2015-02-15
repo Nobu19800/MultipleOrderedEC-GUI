@@ -51,19 +51,6 @@ add_Rule *main_Rule::getaddRule(int num)
 
 
 
-std::string Replace( std::string String1, std::string String2, std::string String3 )
-{
-    std::string::size_type  Pos( String1.find( String2 ) );
-
-    while( Pos != std::string::npos )
-    {
-        String1.replace( Pos, String2.length(), String3 );
-        Pos = String1.find( String2, Pos + String3.length() );
-    }
-
-    return String1;
-}
-
 
 
 void LoadSRule(std::vector<std::string> &cs, int &nm,Rule &r)
@@ -230,8 +217,10 @@ void LoadSubRule(std::vector<std::string> &cs, int &nm,std::vector<sub_Rule> &sr
 
 bool LoadMainRule(std::vector<main_Rule> &rs, std::string Name)
 {
-	string c_f = GetExtension(Name);
-	if(c_f == "lua")
+	PathList pl = PathList(Name);
+	
+	
+	if(pl.cxt == "lua")
 	{
 		return LoadMainRule_Lua(rs, Name);
 	}
@@ -253,16 +242,16 @@ bool LoadMainRule(std::vector<main_Rule> &rs, std::string Name)
 			}
 			
 		}
-		ifs.seekg(0, ios_base::beg);
-		ifs.seekg(0, ios_base::beg);
+		//ifs.seekg(0, ios_base::beg);
+		//ifs.seekg(0, ios_base::beg);
 
-
+		ifs.close();
 		
 
 		if(type == 0)
 		{
 			
-			ifs.close();
+			
 			ifs.open(Name.c_str());
 
 			std::vector<std::string> cs;
@@ -278,8 +267,12 @@ bool LoadMainRule(std::vector<main_Rule> &rs, std::string Name)
 
 				while(getline( stream, token, ' ' ))
 				{
-					std::string tmp = Replace(token, "	", "");
-					cs.push_back(Replace(tmp, " ", ""));
+					std::string tmp = token;
+					
+					coil::replaceString(tmp,"	", "");
+					coil::replaceString(tmp," ", "");
+					
+					cs.push_back(tmp);
 					//std::cout << cs[cs.size()-1] << std::endl;
 					
 				}
@@ -349,14 +342,20 @@ bool LoadMainRule(std::vector<main_Rule> &rs, std::string Name)
 		}
 		else
 		{
+			ifs.open( Name.c_str() , ios::in | ios::binary );
+
 			int m;
 			ifs.read( (char*)&m, sizeof(m) );
+			
+			
+			
 			for(int h=0;h < m;h++)
 			{
-
+				
 				main_Rule R;
 				int w;
 				ifs.read( (char*)&w, sizeof(w) );
+
 				for(int i=0;i < w;i++)
 				{
 					add_Rule ar;
