@@ -11,8 +11,11 @@
 
 #include "MultipleOrderedEC.h"
 #include "MPComp.h"
+
+#ifdef QT_GUI_LIB
 #include "mainwindow.h"
 #include <QApplication>
+#endif
 
 
 /*
@@ -67,8 +70,11 @@ public:
 		static bool app_flag;
 private:
 	RTC::MultipleOrderedEC *m_ec;
+
+#ifdef QT_GUI_LIB
 	MainWindow *mw;
 	QApplication *app;
+#endif
 
 	
 	

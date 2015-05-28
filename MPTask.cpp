@@ -46,7 +46,7 @@ GUITask::GUITask(RTC::MultipleOrderedEC *ec)
 int GUITask::svc()
 {
 	
-
+#ifdef QT_GUI_LIB
 	if(!app_flag)
 	{
 		app_flag = true;
@@ -77,7 +77,7 @@ int GUITask::svc()
 	{
 		
 	}
-
+#endif
 	return 0;
 
 	

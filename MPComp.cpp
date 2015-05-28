@@ -1,4 +1,5 @@
-﻿#include "MPComp.h"
+﻿#include <coil/stringutil.h>
+#include "MPComp.h"
 #include "CompSearch.h"
 #include "MPLua.h"
 
@@ -217,6 +218,18 @@ void LoadSubRule(std::vector<std::string> &cs, int &nm,std::vector<sub_Rule> &sr
 
 bool LoadMainRule(std::vector<main_Rule> &rs, std::string Name)
 {
+	if (Name == "")
+	{
+		main_Rule mr;
+		rs.push_back(mr);
+
+		return true;
+	}
+#ifdef _WINDOWS
+	coil::replaceString(Name, "/", "\\");
+#else
+	coil::replaceString(Name, "\\", "/");
+#endif
 	PathList pl = PathList(Name);
 	
 	
@@ -228,12 +241,19 @@ bool LoadMainRule(std::vector<main_Rule> &rs, std::string Name)
 	{
 		
 		std::ifstream ifs( Name.c_str() , ios::in | ios::binary );
-		if(!ifs)return false;
+		if (!ifs)
+		{
+			main_Rule mr;
+			rs.push_back(mr);
 
-		
+			return false;
+		}
+
+		int count = 0;
 		int type = 0;
 		while(!ifs.eof())
 		{  
+			count += 1;
 			char c;
 			ifs.read( ( char * ) &c, sizeof( char ) );
 			if(c == 0)
@@ -242,10 +262,22 @@ bool LoadMainRule(std::vector<main_Rule> &rs, std::string Name)
 			}
 			
 		}
+
+		
 		//ifs.seekg(0, ios_base::beg);
 		//ifs.seekg(0, ios_base::beg);
 
 		ifs.close();
+
+		//std::cout << count << std::endl;
+		if (count < 2)
+		{
+			main_Rule mr;
+			rs.push_back(mr);
+
+			return true;
+
+		}
 		
 
 		if(type == 0)
@@ -278,10 +310,10 @@ bool LoadMainRule(std::vector<main_Rule> &rs, std::string Name)
 				}
 			}
 
-			for(int i=0;i < cs.size();i++)
+			/*for(int i=0;i < cs.size();i++)
 			{
 				
-			}
+			}*/
 
 			
 
@@ -302,8 +334,13 @@ bool LoadMainRule(std::vector<main_Rule> &rs, std::string Name)
 							break;
 					}
 					
-					if(!AddCount(cs, i))
+					if (!AddCount(cs, i))
+					{
+						rs.push_back(mr);
+						ifs.close();
 						return false;
+					}
+						
 
 					
 					LoadAddRule(cs, i, mr.ar);

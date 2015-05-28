@@ -3,6 +3,7 @@
 #include <iostream>
 #include <rtm/CorbaConsumer.h>
 #include <rtm/idl/BasicDataTypeSkel.h>
+#include <coil/stringutil.h>
 
 
 #include "MPTask.h"
@@ -21,10 +22,20 @@ namespace RTC
 	  getProperty(prop, "exec_cxt.periodic.gui", SetGui);
 	  getProperty(prop, "exec_cxt.periodic.filename", FileName);
 
+	  coil::eraseBlank(SetGui);
+	  coil::eraseBlank(FileName);
+
+	  /*if (FileName == "")
+	  {
+		  FileName = "CompList.conf";
+	  }*/
+
 	  if(SetGui == "YES")
 	  {
+#ifdef QT_GUI_LIB
 		g_task = new GUITask(this);
 		g_task->activate();
+#endif
 	  }
 
 
@@ -91,7 +102,7 @@ namespace RTC
 				if(getCompName(i) == c->v)
 				{
 					c->r = m_comps[i]._ref;
-					m_comps[i]._sm.worker();
+					//m_comps[i]._sm.m_obj->get_ports();
 					//m_comps[i]._sm.m_obj._retn()->get_ports()[0][0]->
 				}
 			}
@@ -180,6 +191,7 @@ namespace RTC
 		rs[h].rs.clear();
 	rs.clear();
 
+	
 	LoadMainRule(rs, FileName);
 
 	//LoadRules();
