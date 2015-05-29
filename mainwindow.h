@@ -57,6 +57,7 @@ private slots:
 	*ファイル保存のスロット
 	*/
 	bool save();
+	bool saveAs();
 	/*
 	*ファイル読み込みスロット
 	*/
@@ -83,6 +84,7 @@ private:
 	QAction *newAct;
 	QAction *openAct;
 	QAction *saveAct;
+	QAction *saveAsAct;
 	QWidget *widget;
 
 	QMenu *fileMenu;

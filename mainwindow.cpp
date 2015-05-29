@@ -3,6 +3,7 @@
 #include <QtWidgets>
 
 #include "mainwindow.h"
+#include "CompSearch.h"
 
 
 
@@ -92,6 +93,10 @@ void MainWindow::createAction()
     saveAct = new QAction(tr("&Save"),this);
     saveAct->setShortcuts(QKeySequence::Save);
     connect(saveAct, SIGNAL(triggered()), this, SLOT(save()));
+
+	saveAsAct = new QAction(tr("&Save &As"), this);
+	saveAsAct->setShortcuts(QKeySequence::SaveAs);
+	connect(saveAsAct, SIGNAL(triggered()), this, SLOT(saveAs()));
 }
 
 void MainWindow::createMenus()
@@ -100,6 +105,7 @@ void MainWindow::createMenus()
 	fileMenu->addAction(newAct);
     fileMenu->addAction(openAct);
     fileMenu->addAction(saveAct);
+	fileMenu->addAction(saveAsAct);
 	
 
 }
@@ -115,9 +121,36 @@ void MainWindow::open()
 	QByteArray ba = fileName.toLocal8Bit();
 	SC->open(ba);
 
+	m_ec->FileName = ba;
+
 }
 
 bool MainWindow::save()
+{
+	
+	
+	if (m_ec->FileName == "")
+	{
+		
+		return saveAs();
+	}
+	else
+	{
+		PathList pl = PathList(m_ec->FileName);
+		if (pl.cxt == "lua")
+		{
+			return saveAs();
+		}
+		else
+		{
+			return SC->save(m_ec->FileName.c_str());
+		}
+		
+		
+	}
+}
+
+bool MainWindow::saveAs()
 {
 	QString fileName = QFileDialog::getSaveFileName(this,
 							tc->toUnicode("保存"), "",
@@ -128,7 +161,7 @@ bool MainWindow::save()
 	QByteArray ba = fileName.toLocal8Bit();
 	
 
-
+	m_ec->FileName = ba;
     return SC->save(ba);
 }
 
@@ -137,7 +170,7 @@ void MainWindow::newFile()
 {
 	SC->newFile();
 
-
+	m_ec->FileName = "";
     
 }
 

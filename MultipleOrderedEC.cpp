@@ -18,7 +18,7 @@ namespace RTC
   {
 	  coil::Properties& prop(::RTC::Manager::instance().getConfig());
 	  SetGui = "YES";
-	  FileName = "CompList.conf";
+	  FileName = "";
 	  getProperty(prop, "exec_cxt.periodic.gui", SetGui);
 	  getProperty(prop, "exec_cxt.periodic.filename", FileName);
 
