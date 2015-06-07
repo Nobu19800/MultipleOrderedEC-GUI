@@ -49,7 +49,7 @@ include_directories(${LUABIND_PATH})
 add_definitions(${OPENRTM_CFLAGS})
 add_definitions(${OMNIORB_CFLAGS})
 
-add_definitions(-D_NOMINMAX)
+add_definitions(-DNOMINMAX)
 
 link_directories(${OPENRTM_LIBRARY_DIRS})
 link_directories(${OMNIORB_LIBRARY_DIRS})
