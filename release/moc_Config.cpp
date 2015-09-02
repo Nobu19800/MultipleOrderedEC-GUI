@@ -1,18 +1,18 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Config.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.3.2)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.4.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../Config.h"
+#include "../../MultipleOrderedEC-C++/Config.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'Config.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.3.2. It"
+#error "This file was generated using the moc from 5.4.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -29,7 +29,8 @@ struct qt_meta_stringdata_Configs_t {
     )
 static const qt_meta_stringdata_Configs_t qt_meta_stringdata_Configs = {
     {
-QT_MOC_LITERAL(0, 0, 7)
+QT_MOC_LITERAL(0, 0, 7) // "Configs"
+
     },
     "Configs"
 };
@@ -61,7 +62,7 @@ void Configs::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
 
 const QMetaObject Configs::staticMetaObject = {
     { &QWidget::staticMetaObject, qt_meta_stringdata_Configs.data,
-      qt_meta_data_Configs,  qt_static_metacall, 0, 0}
+      qt_meta_data_Configs,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
@@ -72,7 +73,7 @@ const QMetaObject *Configs::metaObject() const
 
 void *Configs::qt_metacast(const char *_clname)
 {
-    if (!_clname) return 0;
+    if (!_clname) return Q_NULLPTR;
     if (!strcmp(_clname, qt_meta_stringdata_Configs.stringdata))
         return static_cast<void*>(const_cast< Configs*>(this));
     return QWidget::qt_metacast(_clname);

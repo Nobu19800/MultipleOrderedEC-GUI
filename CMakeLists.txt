@@ -90,7 +90,7 @@ set(luabind_srcs ${LUABIND_PATH}/src/class.cpp ${LUABIND_PATH}/src/class_info.cp
 
 IF (${Qt5Widgets_FOUND})
 
-	set(ec_srcs AddButton.cpp AddButton2.cpp AddButton3.cpp CompSearch.cpp Config.cpp ExComp.cpp FEComp.cpp FrameComp.cpp mainwindow.cpp MPComp.cpp MPLua.cpp MPTask.cpp MultipleOrderedEC.cpp SetComp.cpp)
+	set(ec_srcs AddButton.cpp AddButton2.cpp AddButton3.cpp FileStreamFunc.cpp Config.cpp ExComp.cpp FEComp.cpp FrameComp.cpp mainwindow.cpp MPComp.cpp MPLua.cpp MPTask.cpp MultipleOrderedEC.cpp SetComp.cpp)
 
 
 
@@ -110,7 +110,7 @@ IF (${Qt5Widgets_FOUND})
 	
 	QT5_USE_MODULES(MultipleOrderedEC Widgets)
 ELSE (${Qt5Widgets_FOUND})
-	set(ec_srcs CompSearch.cpp MPComp.cpp MPLua.cpp MPTask.cpp MultipleOrderedEC.cpp )
+	set(ec_srcs FileStreamFunc.cpp MPComp.cpp MPLua.cpp MPTask.cpp MultipleOrderedEC.cpp )
 	ADD_LIBRARY(MultipleOrderedEC SHARED  ${ec_srcs} ${luabind_srcs})
 	
 ENDIF (${Qt5Widgets_FOUND})

@@ -1,18 +1,18 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'FrameComp.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.3.2)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.4.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../FrameComp.h"
+#include "../../MultipleOrderedEC-C++/FrameComp.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'FrameComp.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.3.2. It"
+#error "This file was generated using the moc from 5.4.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -29,31 +29,32 @@ struct qt_meta_stringdata_FrameComp_t {
     )
 static const qt_meta_stringdata_FrameComp_t qt_meta_stringdata_FrameComp = {
     {
-QT_MOC_LITERAL(0, 0, 9),
-QT_MOC_LITERAL(1, 10, 16),
-QT_MOC_LITERAL(2, 27, 0),
-QT_MOC_LITERAL(3, 28, 11),
-QT_MOC_LITERAL(4, 40, 7),
-QT_MOC_LITERAL(5, 48, 2),
-QT_MOC_LITERAL(6, 51, 7),
-QT_MOC_LITERAL(7, 59, 2),
-QT_MOC_LITERAL(8, 62, 12),
-QT_MOC_LITERAL(9, 75, 12),
-QT_MOC_LITERAL(10, 88, 11),
-QT_MOC_LITERAL(11, 100, 1),
-QT_MOC_LITERAL(12, 102, 12),
-QT_MOC_LITERAL(13, 115, 9),
-QT_MOC_LITERAL(14, 125, 12),
-QT_MOC_LITERAL(15, 138, 3),
-QT_MOC_LITERAL(16, 142, 9),
-QT_MOC_LITERAL(17, 152, 9),
-QT_MOC_LITERAL(18, 162, 10),
-QT_MOC_LITERAL(19, 173, 8),
-QT_MOC_LITERAL(20, 182, 2),
-QT_MOC_LITERAL(21, 185, 8),
-QT_MOC_LITERAL(22, 194, 18),
-QT_MOC_LITERAL(23, 213, 2),
-QT_MOC_LITERAL(24, 216, 11)
+QT_MOC_LITERAL(0, 0, 9), // "FrameComp"
+QT_MOC_LITERAL(1, 10, 16), // "UpdateSizeSignal"
+QT_MOC_LITERAL(2, 27, 0), // ""
+QT_MOC_LITERAL(3, 28, 11), // "AddCompSlot"
+QT_MOC_LITERAL(4, 40, 7), // "ExComp*"
+QT_MOC_LITERAL(5, 48, 2), // "ec"
+QT_MOC_LITERAL(6, 51, 7), // "FEComp*"
+QT_MOC_LITERAL(7, 59, 2), // "fc"
+QT_MOC_LITERAL(8, 62, 12), // "AddCompSlot1"
+QT_MOC_LITERAL(9, 75, 12), // "AddCompSlot2"
+QT_MOC_LITERAL(10, 88, 11), // "CompLayout*"
+QT_MOC_LITERAL(11, 100, 1), // "c"
+QT_MOC_LITERAL(12, 102, 12), // "AddCompSlot3"
+QT_MOC_LITERAL(13, 115, 9), // "AddComps2"
+QT_MOC_LITERAL(14, 125, 12), // "InsertComps2"
+QT_MOC_LITERAL(15, 138, 3), // "num"
+QT_MOC_LITERAL(16, 142, 9), // "AddCompsT"
+QT_MOC_LITERAL(17, 152, 9), // "AddCompsU"
+QT_MOC_LITERAL(18, 162, 10), // "DeleteComp"
+QT_MOC_LITERAL(19, 173, 8), // "QWidget*"
+QT_MOC_LITERAL(20, 182, 2), // "Vl"
+QT_MOC_LITERAL(21, 185, 8), // "UpdateEC"
+QT_MOC_LITERAL(22, 194, 18), // "std::vector<Rule>&"
+QT_MOC_LITERAL(23, 213, 2), // "rs"
+QT_MOC_LITERAL(24, 216, 11) // "DeleteFrame"
+
     },
     "FrameComp\0UpdateSizeSignal\0\0AddCompSlot\0"
     "ExComp*\0ec\0FEComp*\0fc\0AddCompSlot1\0"
@@ -151,6 +152,13 @@ void FrameComp::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
                 *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< FEComp* >(); break;
             }
             break;
+        case 9:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+            case 0:
+                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QWidget* >(); break;
+            }
+            break;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
@@ -166,7 +174,7 @@ void FrameComp::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
 
 const QMetaObject FrameComp::staticMetaObject = {
     { &QWidget::staticMetaObject, qt_meta_stringdata_FrameComp.data,
-      qt_meta_data_FrameComp,  qt_static_metacall, 0, 0}
+      qt_meta_data_FrameComp,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
@@ -177,7 +185,7 @@ const QMetaObject *FrameComp::metaObject() const
 
 void *FrameComp::qt_metacast(const char *_clname)
 {
-    if (!_clname) return 0;
+    if (!_clname) return Q_NULLPTR;
     if (!strcmp(_clname, qt_meta_stringdata_FrameComp.stringdata))
         return static_cast<void*>(const_cast< FrameComp*>(this));
     return QWidget::qt_metacast(_clname);
@@ -203,6 +211,6 @@ int FrameComp::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 // SIGNAL 0
 void FrameComp::UpdateSizeSignal()
 {
-    QMetaObject::activate(this, &staticMetaObject, 0, 0);
+    QMetaObject::activate(this, &staticMetaObject, 0, Q_NULLPTR);
 }
 QT_END_MOC_NAMESPACE

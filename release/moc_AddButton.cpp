@@ -1,18 +1,18 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'AddButton.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.3.2)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.4.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../AddButton.h"
+#include "../../MultipleOrderedEC-C++/AddButton.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'AddButton.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.3.2. It"
+#error "This file was generated using the moc from 5.4.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -29,12 +29,13 @@ struct qt_meta_stringdata_AddButton_t {
     )
 static const qt_meta_stringdata_AddButton_t qt_meta_stringdata_AddButton = {
     {
-QT_MOC_LITERAL(0, 0, 9),
-QT_MOC_LITERAL(1, 10, 7),
-QT_MOC_LITERAL(2, 18, 0),
-QT_MOC_LITERAL(3, 19, 7),
-QT_MOC_LITERAL(4, 27, 2),
-QT_MOC_LITERAL(5, 30, 11)
+QT_MOC_LITERAL(0, 0, 9), // "AddButton"
+QT_MOC_LITERAL(1, 10, 7), // "clicked"
+QT_MOC_LITERAL(2, 18, 0), // ""
+QT_MOC_LITERAL(3, 19, 7), // "FEComp*"
+QT_MOC_LITERAL(4, 27, 2), // "fc"
+QT_MOC_LITERAL(5, 30, 11) // "clickedSlot"
+
     },
     "AddButton\0clicked\0\0FEComp*\0fc\0clickedSlot"
 };
@@ -102,7 +103,7 @@ void AddButton::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
 
 const QMetaObject AddButton::staticMetaObject = {
     { &QWidget::staticMetaObject, qt_meta_stringdata_AddButton.data,
-      qt_meta_data_AddButton,  qt_static_metacall, 0, 0}
+      qt_meta_data_AddButton,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
@@ -113,7 +114,7 @@ const QMetaObject *AddButton::metaObject() const
 
 void *AddButton::qt_metacast(const char *_clname)
 {
-    if (!_clname) return 0;
+    if (!_clname) return Q_NULLPTR;
     if (!strcmp(_clname, qt_meta_stringdata_AddButton.stringdata))
         return static_cast<void*>(const_cast< AddButton*>(this));
     return QWidget::qt_metacast(_clname);
@@ -139,7 +140,7 @@ int AddButton::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 // SIGNAL 0
 void AddButton::clicked(FEComp * _t1)
 {
-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_END_MOC_NAMESPACE

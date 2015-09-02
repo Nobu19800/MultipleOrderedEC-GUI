@@ -1,18 +1,18 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'AddButton3.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.3.2)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.4.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../AddButton3.h"
+#include "../../MultipleOrderedEC-C++/AddButton3.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'AddButton3.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.3.2. It"
+#error "This file was generated using the moc from 5.4.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -29,14 +29,15 @@ struct qt_meta_stringdata_AddButton3_t {
     )
 static const qt_meta_stringdata_AddButton3_t qt_meta_stringdata_AddButton3 = {
     {
-QT_MOC_LITERAL(0, 0, 10),
-QT_MOC_LITERAL(1, 11, 7),
-QT_MOC_LITERAL(2, 19, 0),
-QT_MOC_LITERAL(3, 20, 8),
-QT_MOC_LITERAL(4, 29, 2),
-QT_MOC_LITERAL(5, 32, 11),
-QT_MOC_LITERAL(6, 44, 2),
-QT_MOC_LITERAL(7, 47, 11)
+QT_MOC_LITERAL(0, 0, 10), // "AddButton3"
+QT_MOC_LITERAL(1, 11, 7), // "clicked"
+QT_MOC_LITERAL(2, 19, 0), // ""
+QT_MOC_LITERAL(3, 20, 8), // "QWidget*"
+QT_MOC_LITERAL(4, 29, 2), // "Vl"
+QT_MOC_LITERAL(5, 32, 11), // "CompLayout*"
+QT_MOC_LITERAL(6, 44, 2), // "cl"
+QT_MOC_LITERAL(7, 47, 11) // "clickedSlot"
+
     },
     "AddButton3\0clicked\0\0QWidget*\0Vl\0"
     "CompLayout*\0cl\0clickedSlot"
@@ -80,6 +81,17 @@ void AddButton3::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 1: _t->clickedSlot(); break;
         default: ;
         }
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+        case 0:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+            case 0:
+                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QWidget* >(); break;
+            }
+            break;
+        }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         void **func = reinterpret_cast<void **>(_a[1]);
@@ -94,7 +106,7 @@ void AddButton3::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
 
 const QMetaObject AddButton3::staticMetaObject = {
     { &QWidget::staticMetaObject, qt_meta_stringdata_AddButton3.data,
-      qt_meta_data_AddButton3,  qt_static_metacall, 0, 0}
+      qt_meta_data_AddButton3,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
@@ -105,7 +117,7 @@ const QMetaObject *AddButton3::metaObject() const
 
 void *AddButton3::qt_metacast(const char *_clname)
 {
-    if (!_clname) return 0;
+    if (!_clname) return Q_NULLPTR;
     if (!strcmp(_clname, qt_meta_stringdata_AddButton3.stringdata))
         return static_cast<void*>(const_cast< AddButton3*>(this));
     return QWidget::qt_metacast(_clname);
@@ -122,7 +134,7 @@ int AddButton3::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 2)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            qt_static_metacall(this, _c, _id, _a);
         _id -= 2;
     }
     return _id;
@@ -131,7 +143,7 @@ int AddButton3::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 // SIGNAL 0
 void AddButton3::clicked(QWidget * _t1, CompLayout * _t2)
 {
-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_END_MOC_NAMESPACE

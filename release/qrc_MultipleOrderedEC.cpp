@@ -1,15 +1,13 @@
 /****************************************************************************
 ** Resource object code
 **
-** Created by: The Resource Compiler for Qt version 5.3.2
+** Created by: The Resource Compiler for Qt version 5.4.1
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include <QtCore/qglobal.h>
-
 static const unsigned char qt_resource_data[] = {
-  // C:/Users/Nobuhiko/Desktop/DevRTC/MultipleOrderedEC-GUI/images/arrow.png
+  // C:/workspace/ExecutionContext/MultipleOrderedEC-C++/images/arrow.png
   0x0,0x0,0xa,0xa1,
   0x89,
   0x50,0x4e,0x47,0xd,0xa,0x1a,0xa,0x0,0x0,0x0,0xd,0x49,0x48,0x44,0x52,0x0,
@@ -210,32 +208,49 @@ static const unsigned char qt_resource_struct[] = {
 
 };
 
-QT_BEGIN_NAMESPACE
+#ifdef QT_NAMESPACE
+#  define QT_RCC_PREPEND_NAMESPACE(name) ::QT_NAMESPACE::name
+#  define QT_RCC_MANGLE_NAMESPACE0(x) x
+#  define QT_RCC_MANGLE_NAMESPACE1(a, b) a##_##b
+#  define QT_RCC_MANGLE_NAMESPACE2(a, b) QT_RCC_MANGLE_NAMESPACE1(a,b)
+#  define QT_RCC_MANGLE_NAMESPACE(name) QT_RCC_MANGLE_NAMESPACE2( \
+        QT_RCC_MANGLE_NAMESPACE0(name), QT_RCC_MANGLE_NAMESPACE0(QT_NAMESPACE))
+#else
+#   define QT_RCC_PREPEND_NAMESPACE(name) name
+#   define QT_RCC_MANGLE_NAMESPACE(name) name
+#endif
 
-extern Q_CORE_EXPORT bool qRegisterResourceData
-    (int, const unsigned char *, const unsigned char *, const unsigned char *);
+#ifdef QT_NAMESPACE
+namespace QT_NAMESPACE {
+#endif
 
-extern Q_CORE_EXPORT bool qUnregisterResourceData
-    (int, const unsigned char *, const unsigned char *, const unsigned char *);
+bool qRegisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *);
 
-QT_END_NAMESPACE
+bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *);
 
+#ifdef QT_NAMESPACE
+}
+#endif
 
-int QT_MANGLE_NAMESPACE(qInitResources_MultipleOrderedEC)()
+int QT_RCC_MANGLE_NAMESPACE(qInitResources_MultipleOrderedEC)();
+int QT_RCC_MANGLE_NAMESPACE(qInitResources_MultipleOrderedEC)()
 {
-    QT_PREPEND_NAMESPACE(qRegisterResourceData)
+    QT_RCC_PREPEND_NAMESPACE(qRegisterResourceData)
         (0x01, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 
-Q_CONSTRUCTOR_FUNCTION(QT_MANGLE_NAMESPACE(qInitResources_MultipleOrderedEC))
-
-int QT_MANGLE_NAMESPACE(qCleanupResources_MultipleOrderedEC)()
+int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_MultipleOrderedEC)();
+int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_MultipleOrderedEC)()
 {
-    QT_PREPEND_NAMESPACE(qUnregisterResourceData)
+    QT_RCC_PREPEND_NAMESPACE(qUnregisterResourceData)
        (0x01, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 
-Q_DESTRUCTOR_FUNCTION(QT_MANGLE_NAMESPACE(qCleanupResources_MultipleOrderedEC))
-
+namespace {
+   struct initializer {
+       initializer() { QT_RCC_MANGLE_NAMESPACE(qInitResources_MultipleOrderedEC)(); }
+       ~initializer() { QT_RCC_MANGLE_NAMESPACE(qCleanupResources_MultipleOrderedEC)(); }
+   } dummy;
+}
